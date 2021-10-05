@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  AssemblyInfo.cpp
+  Clients.cpp
+C:\Users\Ent\source\repos\ServerBitmap\Clients\Clients.cpp(8,35): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
+  Создание кода...
+C:\Users\Ent\source\repos\ServerBitmap\Clients\Clients.cpp(8,35): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::ServerParser " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+LINK : fatal error LNK1104: не удается открыть файл "C:\Users\Ent\source\repos\ServerBitmap\Debug\Clients.exe"

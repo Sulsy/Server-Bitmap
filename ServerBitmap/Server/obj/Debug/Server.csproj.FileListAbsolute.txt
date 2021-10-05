@@ -1,0 +1,9 @@
+C:\Users\Ent\source\repos\ServerBitmap\Server\bin\Debug\Server.exe.config
+C:\Users\Ent\source\repos\ServerBitmap\Server\bin\Debug\Server.exe
+C:\Users\Ent\source\repos\ServerBitmap\Server\bin\Debug\Server.pdb
+C:\Users\Ent\source\repos\ServerBitmap\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Ent\source\repos\ServerBitmap\Server\obj\Debug\Server.exe
+C:\Users\Ent\source\repos\ServerBitmap\Server\obj\Debug\Server.pdb
+C:\Users\Ent\source\repos\ServerBitmap\Server\bin\Debug\ClassLibrary2.dll
+C:\Users\Ent\source\repos\ServerBitmap\Server\bin\Debug\ClassLibrary2.pdb
+C:\Users\Ent\source\repos\ServerBitmap\Server\obj\Debug\Server.csproj.CopyComplete

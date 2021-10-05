@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  AssemblyInfo.cpp
+  Сlient.cpp
+C:\Users\Ent\source\repos\ServerBitmap\Сlient\Сlient.cpp(23,36): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
+  Создание кода...
+C:\Users\Ent\source\repos\ServerBitmap\Сlient\Сlient.cpp(23,36): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::ConectServ " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+  AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Сlient.vcxproj -> C:\Users\Ent\source\repos\ServerBitmap\Debug\Сlient.exe

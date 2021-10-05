@@ -1,0 +1,17 @@
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.deps.json
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.dll
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.pdb
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.csprojAssemblyReference.cache
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfoInputs.cache
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfo.cs
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.dll
+C:\Users\Ent\source\repos\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.pdb
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.deps.json
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.dll
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.pdb
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.csprojAssemblyReference.cache
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfoInputs.cache
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfo.cs
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.dll
+C:\Users\theen\Desktop\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.pdb
