@@ -66,7 +66,7 @@ namespace ClassLibrary2
         {
             Console.WriteLine("Название команды=");
             name = Console.ReadLine();
-            Parse();
+            Parse(name);
 
         }
         static byte[] ParametrReqest(int count)
@@ -95,7 +95,7 @@ namespace ClassLibrary2
             return date;
         }
 
-        static private void Parse()
+        static private void Parse(string name)
         {
             switch (name)
             {
@@ -164,30 +164,36 @@ namespace ClassLibrary2
         
         static private Int16[] ToInt16(byte[] date, int count)
         {
-            Int16[] parametrs = new Int16[count + 3];
-            byte[] par = new byte[2];
-            int MaxByte = 1, MinBayte = 2, I = 0;
-            for (int i = 0; i < count; i++)
+            if (((count * 2)+4)== date.Length)
             {
-                par[0] = date[MaxByte];
-                par[1] = date[MinBayte];
-                parametrs[i] = BitConverter.ToInt16(par, 0);
-                MinBayte = MinBayte + 2; MaxByte = MaxByte + 2;
-                I = i;
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                if (date[MaxByte + i] < 10)
-                {
-                    Color += "0" + date[MaxByte + i];
-                }
-                else
-                {
-                    Color += date[MaxByte + i];
-                }
 
+
+                Int16[] parametrs = new Int16[count + 3];
+                byte[] par = new byte[2];
+                int MaxByte = 1, MinBayte = 2, I = 0;
+                for (int i = 0; i < count; i++)
+                {
+                    par[0] = date[MaxByte];
+                    par[1] = date[MinBayte];
+                    parametrs[i] = BitConverter.ToInt16(par, 0);
+                    MinBayte = MinBayte + 2; MaxByte = MaxByte + 2;
+                    I = i;
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    if (date[MaxByte + i] < 10)
+                    {
+                        Color += "0" + date[MaxByte + i];
+                    }
+                    else
+                    {
+                        Color += date[MaxByte + i];
+                    }
+
+                }
+                return parametrs;
             }
-            return parametrs;
+            else { throw new Exception("Кол-во параметров неверное относительно требуемого"); }
 
         }
         static public Command Parse(byte[] date)
@@ -252,7 +258,7 @@ namespace ClassLibrary2
                         break;
                     default:
                         command = new Command();
-                        Console.WriteLine("Поступившая команда не верна");
+                        throw new Exception("Название команды не совпадает с существующими");
                         break;
                 }
                 Color = null;

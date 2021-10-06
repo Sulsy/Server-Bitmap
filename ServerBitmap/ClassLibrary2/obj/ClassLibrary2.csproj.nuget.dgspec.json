@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ent\\source\\repos\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj": {}
+    "C:\\Users\\Ent\\Desktop\\cscs\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ent\\source\\repos\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj": {
+    "C:\\Users\\Ent\\Desktop\\cscs\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ent\\source\\repos\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj",
+        "projectUniqueName": "C:\\Users\\Ent\\Desktop\\cscs\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj",
         "projectName": "ClassLibrary2",
-        "projectPath": "C:\\Users\\Ent\\source\\repos\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj",
+        "projectPath": "C:\\Users\\Ent\\Desktop\\cscs\\ServerBitmap\\ClassLibrary2\\ClassLibrary2.csproj",
         "packagesPath": "C:\\Users\\Ent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ent\\source\\repos\\ServerBitmap\\ClassLibrary2\\obj\\",
+        "outputPath": "C:\\Users\\Ent\\Desktop\\cscs\\ServerBitmap\\ClassLibrary2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ent\\AppData\\Roaming\\NuGet\\NuGet.Config",
