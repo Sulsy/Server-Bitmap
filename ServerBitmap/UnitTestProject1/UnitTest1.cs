@@ -9,12 +9,11 @@ namespace UnitTestProject1
     {
 
         [TestMethod]
-        public void TestClearDisplayParam()
+        public void TestClearDisplayParamColor()
         {
             //arange
             Command command;
-            Command commands = new Command("clear display", "020202");
-            // Color = "020202", Name= "clear display"   Очистка десплея 
+            string Color = "020202";
             byte[] x2 = new byte[4];
             x2[1] = 0x02;
             x2[2] = 0x02;
@@ -23,8 +22,7 @@ namespace UnitTestProject1
             //act
             command = Parser.Parse(x2);
             //assert   
-            Assert.AreEqual(commands.Color, command.Color);
-            Assert.AreEqual(command.Parametr1,0);
+            Assert.AreEqual(Color, command.Color);
         }
         [ExpectedException(typeof(Exception))]
         [TestMethod]
@@ -32,20 +30,16 @@ namespace UnitTestProject1
         {
             //arange
             Command command;
-            Command commands = new Command("clear display", "020202");
-            // Color = "020202", Name= "clear display"   Очистка десплея 
             byte[] x2 = new byte[6];
             x2[1] = 0x01;
             x2[2] = 0x03;
             x2[3] = 0x02;
             x2[4] = 0x02;
             x2[5] = 0x02;
-            x2[0] = 0x00;
+            x2[0] = 0x00;//Слишком много параметров для команды
             //act
             command = Parser.Parse(x2);
             //assert   
-            Assert.AreEqual(commands.Color, command.Color);
-            Assert.AreEqual(command.Parametr1, 0);
         }
         [ExpectedException(typeof(Exception))]
         [TestMethod]
@@ -53,24 +47,19 @@ namespace UnitTestProject1
         {
             //arange
             Command command;
-            Command commands = new Command("clear display", "020202");
-            // Color = "020202", Name= "clear display"   Очистка десплея 
             byte[] x2 = new byte[1];
-            x2[0] = 0x00;
+            x2[0] = 0x00;//Команда без параметров
             //act
             command = Parser.Parse(x2);
             //assert   
-            Assert.AreEqual(commands.Color, command.Color);
-            Assert.AreEqual(command.Parametr1, 0);
         }
         [TestMethod]
         public void TestCommandName()
         {
             //arange
             Command command;
-            Command commands = new Command("clear display", "020202");
             byte[] x2 = new byte[4];
-            // Color = "020202", Name= "clear display"   Очистка десплея 
+            string Name = "clear display";  
             x2[1] = 0x02;
             x2[2] = 0x02;
             x2[3] = 0x02;
@@ -78,7 +67,7 @@ namespace UnitTestProject1
             //act
             command = Parser.Parse(x2);
             //assert   
-            Assert.AreEqual(commands.Name, command.Name);
+            Assert.AreEqual(Name, command.Name);
         }
         [ExpectedException(typeof(Exception))]
         [TestMethod]
@@ -86,17 +75,15 @@ namespace UnitTestProject1
         {
             //arange
             Command command;
-            Command commands = new Command("clear display", "020202");
             byte[] x2 = new byte[4];
-            // Color = "020202", Name= "clear display"   Очистка десплея 
             x2[1] = 0x02;
             x2[2] = 0x02;
             x2[3] = 0x02;
-            x2[0] = 0x10;
+            x2[0] = 0x10;//Несуществующяя команда
             //act
             command = Parser.Parse(x2);
             //assert   
-            Assert.AreEqual(commands.Name, command.Name);
+           
         }
     }
 }
