@@ -13,11 +13,14 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            Int16 a = 300;
-            Int16 b = 200;
-            Int16 c = 250;
-            Int16 d = 230;
-            byte[] x1 = BitConverter.GetBytes(a);
+            Int16[] a = { 20, 300, 4, 5 };
+            byte[] Color = { 02, 03, 04 };
+            string name = "draw pixel";
+            Builder builder = new Builder( a, name, Color);
+           byte[] x1= builder.Parse();
+            Command command = Parser.Parse(x1);
+            Consoles.Output(command); 
+           /* byte[] x1 = BitConverter.GetBytes(a);
             byte[] x22 = BitConverter.GetBytes(b);
             byte[] x3 = BitConverter.GetBytes(c);
             byte[] x4 = BitConverter.GetBytes(d);
@@ -35,7 +38,7 @@ namespace Server
             x2[11] = 04;
             x2[0] = 0x03;
             Command command = Parser.Parse(x2);
-            Consoles.Output(command);
+            Consoles.Output(command);*/
 
         }
 

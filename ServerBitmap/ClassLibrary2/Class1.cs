@@ -58,29 +58,25 @@ namespace ClassLibrary2
         public Int16 Parametr4 { get; set; }
         public string Color { get; set; }
     }
-    static public class Builder
+    public class Builder
     {
-        static string name;
-        static byte One;
-        static public void ClientReqest()
+        string name;
+        Int16[] parametrs;
+        Byte[] Color;
+        public Builder(Int16[] parametrs,string name,Byte[] Color)
         {
-            Console.WriteLine("Название команды=");
-            name = Console.ReadLine();
-            Parse(name);
-
+            this.name = name;
+            this.parametrs = parametrs;
+            this.Color = Color;
         }
-        static byte[] ParametrReqest(int count)
+        byte[] ParametrReqest(byte One, int count)
         {
             byte[] date = new byte[(count * 2) + 4];
             byte[] par = new byte[2];
             date[0] = One;
-            int MaxByte = 0, MinBayte = 1;
-
-            Int16[] parametrs = new Int16[count];
+            int MaxByte = 1, MinBayte = 2;
             for (int i = 0; i < count; i++)
             {
-                Console.WriteLine($"Введите параметр {i}=");
-                parametrs[i] = Convert.ToInt16(Console.ReadLine());
                 par = BitConverter.GetBytes(parametrs[i]);
                 date[MaxByte] = par[0];
                 date[MinBayte] = par[1];
@@ -90,71 +86,49 @@ namespace ClassLibrary2
 
             for (int i = 0; i < 3; i++)
             {
-                date[MinBayte + i] = 02;
+                date[MaxByte + i] = Color[i];
             }
             return date;
         }
 
-        static private void Parse(string name)
+        public byte[] Parse()
         {
+            byte One;
             switch (name)
             {
                 case "clear display":
                     One = 0x00;
-
+                   return ParametrReqest(One,0);
                     break;
                 case "draw pixel":
                     One = 1;
-                    ParametrReqest(2);
+                    return ParametrReqest(One, 2);
                     break;
                 case "draw line":
                     One = 0x02;
-                    ParametrReqest(2);
+                    return ParametrReqest(One, 4);
                     break;
                 case "draw rectangle":
                     One = 0x03;
-                    ParametrReqest(2);
+                    return ParametrReqest(One, 4);
                     break;
                 case "fill rectangle":
                     One = 0x04;
-                    ParametrReqest(2);
+                    return ParametrReqest(One, 4);
                     break;
                 case "draw ellipse":
                     One = 0x05;
-                    ParametrReqest(2);
+                    return ParametrReqest(One, 4);
                     break;
                 case "fill ellipse":
                     One = 0x06;
-                    ParametrReqest(2);
+                    return ParametrReqest(One, 4);
                     break;
                 default:
+                    throw new Exception("Название команды не совпадает с существующими"); 
                     break;
             }
         }
-        /*static public void clear_display(string color)
-         {
-
-         }
-         static public void draw_pixel(Int16 par1, Int16 par2, string color)
-         {
-
-         }
-         static public void draw_line(Int16 par1, Int16 par2, Int16 par3, Int16 par4, string color)
-         {
-
-         }
-         static public void draw_rectangle(Int16 par1, Int16 par2, Int16 par3, Int16 par4, string color)
-         {
-
-         }
-         static public void draw_ellipse(Int16 par1, Int16 par2, Int16 par3, Int16 par4, string color)
-         {
-
-         }
-         static public void fill_ellipse(Int16 par1, Int16 par2, Int16 par3, Int16 par4, string color)
-         {
-
-         }*/
     }
     static public class Parser
     {
@@ -217,8 +191,10 @@ namespace ClassLibrary2
                         Name = "draw line";
                         Int16[] pars = ToInt16(date, 4);
                         par1 = pars[0];
-                         par2 = pars[1];
-                        command = new Command(Name, par1, par2, Color);
+                        par2 = pars[1];
+                        par3 = pars[2];
+                        par4 = pars[3];
+                    command = new Command(Name, par1, par2, par3, par4, Color);
                         break;
                     case 0x03:
                         Name = "draw rectangle";
