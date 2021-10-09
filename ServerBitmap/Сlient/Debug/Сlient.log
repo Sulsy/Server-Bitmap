@@ -1,8 +1,12 @@
-﻿  pch.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppClean.targets(76,5): warning : Отказано в доступе по пути "c:\users\ent\desktop\cscs\serverbitmap\debug\сlient.exe".
+  pch.cpp
   AssemblyInfo.cpp
   Сlient.cpp
-C:\Users\Ent\source\repos\ServerBitmap\Сlient\Сlient.cpp(23,36): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Сlient\Сlient.cpp(21,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Сlient\Сlient.cpp(34,34): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Сlient\Сlient.cpp(34,34): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::Builder " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Сlient\Сlient.cpp(35,23): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
   Создание кода...
-C:\Users\Ent\source\repos\ServerBitmap\Сlient\Сlient.cpp(23,36): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::ConectServ " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
-  AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
-  Сlient.vcxproj -> C:\Users\Ent\source\repos\ServerBitmap\Debug\Сlient.exe
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Сlient\Сlient.cpp(35,23): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::ClientConect " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+LINK : fatal error LNK1104: не удается открыть файл "C:\Users\Ent\Desktop\cscs\ServerBitmap\Debug\Сlient.exe"

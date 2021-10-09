@@ -22,3 +22,4 @@ C:\Users\Ent\Desktop\cscs\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\Cl
 C:\Users\Ent\Desktop\cscs\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfo.cs
 C:\Users\Ent\Desktop\cscs\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.dll
 C:\Users\Ent\Desktop\cscs\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.csprojAssemblyReference.cache

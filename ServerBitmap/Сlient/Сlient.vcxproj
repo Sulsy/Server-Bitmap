@@ -133,6 +133,7 @@
     <Link>
       <AdditionalDependencies />
       <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
