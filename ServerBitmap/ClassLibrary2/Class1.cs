@@ -6,107 +6,53 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 
 namespace ClassLibrary2
 {
-    
-    public class ServerConect
+    static public class Udp
+    { 
+    static string remoteAddress= "127.0.0.1"; 
+    static int remotePort= 8005; 
+    static int localPort= 8005; 
+    public static void SendMessage(byte[] data)
     {
-        static int port = 8005; // порт для приема входящих запросов
-        static public byte[] Connect()
+        UdpClient sender = new UdpClient(); 
+        try
         {
-            // получаем адреса для запуска сокета
-            IPEndPoint ipPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), port);
-
-            // создаем сокет
-            Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            try
-            {
-                // связываем сокет с локальной точкой, по которой будем принимать данные
-                listenSocket.Bind(ipPoint);
-
-                // начинаем прослушивание
-                listenSocket.Listen(10);
-
-                Console.WriteLine("Сервер запущен. Ожидание подключений...");
-
-                while (true)
-                {
-                    Socket handler = listenSocket.Accept();
-                    // получаем сообщение
-                    StringBuilder builder = new StringBuilder();
-                    int bytes = 0; // количество полученных байтов
-                    byte[] data = new byte[256];
-                    do
-                    {
-                        bytes = handler.Receive(data);
-                    }
-                    while (handler.Available > 0);
-
-                    //Console.WriteLine(DateTime.Now.ToShortTimeString() + ": " + builder.ToString());
-
-                    // отправляем ответ
-                    string message = "ваше сообщение доставлено";
-                    byte[] dats= new byte[bytes];
-                    for (int i = 0; i < bytes; i++)
-                    {
-                        dats[i] = data[i];
-                    }
-                    data = Encoding.Unicode.GetBytes(message);
-                    handler.Send(data);
-                    // закрываем сокет
-                    handler.Shutdown(SocketShutdown.Both);
-                    handler.Close();
-                    return dats;
-                }
-               
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return null;
+            sender.Send(data, data.Length, remoteAddress, remotePort); 
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            sender.Close();
         }
     }
-    public class ClientConect
+    public static byte[] ReceiveMessage()
     {
-        // адрес и порт сервера, к которому будем подключаться
-        static int port = 8005; // порт сервера
-        static string address = "127.0.0.1"; // адрес сервера
-        static public void Connect(byte[] data)
+        UdpClient receiver = new UdpClient(localPort); 
+        IPEndPoint remoteIp = null; 
+        try
         {
-            try
+            while (true)
             {
-                IPEndPoint ipPoint = new IPEndPoint(IPAddress.Parse(address), port);
-
-                Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                // подключаемся к удаленному хосту
-                socket.Connect(ipPoint);
-                socket.Send(data);
-
-                // получаем ответ
-                data = new byte[256]; // буфер для ответа
-                StringBuilder builder = new StringBuilder();
-                int bytes = 0; // количество полученных байт
-
-                do
-                {
-                    bytes = socket.Receive(data, data.Length, 0);
-                    builder.Append(Encoding.Unicode.GetString(data, 0, bytes));
+                byte[] data = receiver.Receive(ref remoteIp); 
+                    return data;
                 }
-                while (socket.Available > 0);
-                Console.WriteLine("ответ сервера: " + builder.ToString());
-
-                // закрываем сокет
-               socket.Shutdown(SocketShutdown.Both);
-                 socket.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            Console.ReadLine();
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+                return null;
+        }
+        finally
+        {
+            receiver.Close();
+        }
+    }
     }
     public class Consoles
     {
