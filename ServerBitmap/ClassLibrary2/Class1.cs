@@ -179,7 +179,6 @@ namespace ClassLibrary2
         static string Color;
         static string Name;
        
-        
         static private Int16[] ToInt16(byte[] date, int count)
         {
             if (((count * 2)+4)== date.Length)

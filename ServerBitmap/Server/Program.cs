@@ -14,12 +14,12 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            
+            try
+            {
                 byte[] data, mas = { 0 };
                 while (true)
                 {
-                try
-                {
+                
                     data = Udp.ReceiveMessage();
                     if (data != null)
                     {
@@ -29,12 +29,13 @@ namespace Server
                     }
                     data = null;
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
 
-                }  
-        }         
+            }
         }
 
     }
