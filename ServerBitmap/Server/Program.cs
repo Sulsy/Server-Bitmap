@@ -14,27 +14,30 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            try
+            while (true)
             {
                 byte[] data, mas = { 0 };
-                while (true)
+                try
                 {
-                
-                    data = Udp.ReceiveMessage();
-                    if (data != null)
+                    while (true)
                     {
-                        Udp.SendMessage(mas);
-                        Command command = Parser.Parse(data);
-                        Consoles.Output(command);
+                        data = Udp.ReceiveMessage();
+                        if (data != null)
+                        {
+
+                            //Udp.SendMessage(mas);
+                            Command command = Parser.Parse(data);
+                            //Consoles.Output(command);
+                            data = null;
+                        }
                     }
+                   
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                     data = null;
                 }
-                
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-
             }
         }
 

@@ -15,7 +15,8 @@ C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\bin\Debug\Server.pdb
 C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\bin\Debug\Server.exe.config
 C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
 C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete
 C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.AssemblyReference.cache
+C:\Users\Ent\Desktop\cscs\ServerBitmap\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache

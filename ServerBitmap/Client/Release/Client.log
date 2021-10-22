@@ -1,0 +1,9 @@
+﻿  Client.cpp
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(34,34): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(34,34): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::Builder " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(35,23): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущем модуле трансляции
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(35,23): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::ClientConect " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(22,8): warning C4101: a: неиспользованная локальная переменная
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(16,10): warning C4101: Color: неиспользованная локальная переменная
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(22,19): warning C4101: b: неиспользованная локальная переменная
+LINK : fatal error LNK1104: не удается открыть файл "C:\Users\Ent\Desktop\cscs\ServerBitmap\Release\Client.exe"

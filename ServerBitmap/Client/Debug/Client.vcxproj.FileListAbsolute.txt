@@ -1,0 +1,2 @@
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Debug\Client.vcxproj.AssemblyReference.cache
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Debug\Client.vcxproj.CopyComplete

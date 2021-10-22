@@ -1,0 +1,10 @@
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\bin\Debug\test.exe.config
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\bin\Debug\test.exe
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\bin\Debug\test.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\bin\Debug\ClassLibrary2.dll
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\bin\Debug\ClassLibrary2.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\obj\Debug\test.exe
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\obj\Debug\test.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\obj\Debug\test.csproj.AssemblyReference.cache
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\Ent\Desktop\cscs\ServerBitmap\test\obj\Debug\test.csproj.CopyComplete

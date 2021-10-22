@@ -1,0 +1,14 @@
+﻿  pch.cpp
+  AssemblyInfo.cpp
+  Client.cpp
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(41,35): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущей единице трансляции.
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(41,35): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::Builder " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(42,19): warning C4691: "System::Object": в неадресуемом объекте сборка "netstandard" ожидался адресуемый тип; вместо этого использован тип, определенный в текущей единице трансляции.
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(42,19): message : Сообщение диагностики возникло при импорте типа "ClassLibrary2::Udp " из сборки "ClassLibrary2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null".
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(17,9): warning C4101: a: неиспользованная локальная переменная
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(16,11): warning C4101: Color: неиспользованная локальная переменная
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Client\Client.cpp(17,20): warning C4101: b: неиспользованная локальная переменная
+  Создание кода...
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Client.vcxproj -> C:\Users\Ent\Desktop\cscs\ServerBitmap\Debug\Client.exe

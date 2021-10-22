@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-
+using System.Drawing;
 namespace ClassLibrary2
 {
-    static public class Udp
+    public static class Udp
     { 
     static string remoteAddress= "127.0.0.1"; 
-    static int remotePort= 8005; 
-    static int localPort= 8005; 
+    static int remotePort= 8005;
+    static int localPort= 8005;
     public static void SendMessage(byte[] data)
     {
         UdpClient sender = new UdpClient(); 
@@ -24,6 +24,7 @@ namespace ClassLibrary2
         }
         catch (Exception ex)
         {
+            sender.Close();
             Console.WriteLine(ex.Message);
         }
         finally
@@ -39,13 +40,18 @@ namespace ClassLibrary2
         {
             while (true)
             {
-                byte[] data = receiver.Receive(ref remoteIp); 
+                byte[] data = receiver.Receive(ref remoteIp);
+                if (data!=null)
+                {
                     return data;
                 }
+                    
+            }
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
+            receiver.Close();
                 return null;
         }
         finally
@@ -174,7 +180,7 @@ namespace ClassLibrary2
             }
         }
     }
-    static public class Parser
+    public static class Parser
     {
         static string Color;
         static string Name;
@@ -200,11 +206,11 @@ namespace ClassLibrary2
                 {
                     if (date[MaxByte + i] < 10)
                     {
-                        Color += "0" + date[MaxByte + i];
+                        Color += date[MaxByte + i].ToString("X");
                     }
                     else
                     {
-                        Color += date[MaxByte + i];
+                        Color += date[MaxByte + i].ToString("X");
                     }
 
                 }
@@ -258,7 +264,7 @@ namespace ClassLibrary2
                         command = new Command(Name, par1, par2, par3, par4, Color);
                         break;
                     case 0x05:
-                        Name = " draw ellipse";
+                        Name = "draw ellipse";
                         Int16[] parse = ToInt16(date, 4);
                         par1 = parse[0];
                         par2 = parse[1];

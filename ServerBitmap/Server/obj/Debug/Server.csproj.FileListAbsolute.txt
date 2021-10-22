@@ -12,7 +12,8 @@ C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\bin\Debug\Server.exe
 C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\bin\Debug\Server.pdb
 C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\bin\Debug\ClassLibrary2.dll
 C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\bin\Debug\ClassLibrary2.pdb
-C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.csprojAssemblyReference.cache
-C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.csproj.CopyComplete
 C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.exe
 C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Ent\Desktop\cscs\ServerBitmap\Server\obj\Debug\Server.csproj.CopyComplete
