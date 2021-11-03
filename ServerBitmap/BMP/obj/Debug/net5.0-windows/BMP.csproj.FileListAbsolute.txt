@@ -18,3 +18,4 @@ C:\Users\Ent\Desktop\cscs\ServerBitmap\BMP\obj\Debug\net5.0-windows\BMP.pdb
 C:\Users\Ent\Desktop\cscs\ServerBitmap\BMP\obj\Debug\net5.0-windows\BMP.genruntimeconfig.cache
 C:\Users\Ent\Desktop\cscs\ServerBitmap\BMP\bin\Debug\net5.0-windows\ClassLibrary2.dll
 C:\Users\Ent\Desktop\cscs\ServerBitmap\BMP\bin\Debug\net5.0-windows\ClassLibrary2.pdb
+C:\Users\Ent\Desktop\cscs\ServerBitmap\BMP\obj\Debug\net5.0-windows\BMP.csproj.CopyComplete

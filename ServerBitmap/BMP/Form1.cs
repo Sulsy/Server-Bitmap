@@ -127,19 +127,30 @@ namespace BMP
         }
         private void Connect()
         {
+            byte[] data;
             while (true)
             {
-                byte[] data = Udp.ReceiveMessage();
-                if (data != null)
+                try
                 {
-                    graphics = System.Drawing.Graphics.FromImage(bmp);
-                    Command command = Parser.Parse(data);
-                    //Consoles.Output(command);
-                    BMP(command);
+
+                    data = Udp.ReceiveMessage();
+                    if (data != null)
+                    {
+                        graphics = System.Drawing.Graphics.FromImage(bmp);
+                        Command command = Parser.Parse(data);
+                        //Consoles.Output(command);
+                        BMP(command);
+                        data = null;
+                    }
+
+                }
+
+                catch (Exception)
+                {
                     data = null;
+                    continue;
                 }
             }
-           
         }
     }
 }
