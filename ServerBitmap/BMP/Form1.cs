@@ -58,8 +58,6 @@ namespace BMP
         {
             graphics.Clear(color);
             pictureBox1.Image = bmp;
-            Thread myThread = new Thread(new ThreadStart(Connect));
-            myThread.Start();
         }
         public void draw_pixel(Int16 par1, Int16 par2, Color color)
         {
@@ -75,8 +73,6 @@ namespace BMP
             Point point2 = new Point(par3  , par4);
             graphics.DrawLine(pen, point1, point2);
             pictureBox1.Image = bmp;
-            Thread myThread = new Thread(new ThreadStart(Connect));
-            myThread.Start();
         }
         public void draw_rectangle(Int16 par1, Int16 par2, Int16 par3, Int16 par4, Color color)
         {
@@ -88,8 +84,6 @@ namespace BMP
             Rectangle rectangle = new Rectangle(point1,size);
             graphics.DrawRectangle(pen, rectangle);
             pictureBox1.Image = bmp;
-            Thread myThread = new Thread(new ThreadStart(Connect));
-            myThread.Start();
         }
         public void fill_rectangle(Int16 par1, Int16 par2, Int16 par3, Int16 par4, Color color)
         {
@@ -100,8 +94,6 @@ namespace BMP
             Rectangle rectangle = new Rectangle(point1, size);
             graphics.FillRectangle(brush, rectangle);
             pictureBox1.Image = bmp;
-            Thread myThread = new Thread(new ThreadStart(Connect));
-            myThread.Start();
         }
         public void draw_ellipse(Int16 par1, Int16 par2, Int16 par3, Int16 par4, Color color)
         {
@@ -113,8 +105,6 @@ namespace BMP
             Rectangle rectangle = new Rectangle(point1, size);
             graphics.DrawEllipse(pen, rectangle);
             pictureBox1.Image = bmp;
-            Thread myThread = new Thread(new ThreadStart(Connect));
-            myThread.Start();
         }
         public void fill_ellipse(Int16 par1, Int16 par2, Int16 par3, Int16 par4, Color color)
         {
@@ -125,8 +115,6 @@ namespace BMP
             Rectangle rectangle = new Rectangle(point1, size);
             graphics.FillRectangle(brush, rectangle);
             pictureBox1.Image = bmp;
-            Thread myThread = new Thread(new ThreadStart(Connect));
-            myThread.Start();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -136,18 +124,22 @@ namespace BMP
             pictureBox1.Image = bmp;
             Thread myThread = new Thread(new ThreadStart(Connect));
             myThread.Start();
-
         }
         private void Connect()
         {
-            byte[] data = Udp.ReceiveMessage();
-            if (data != null)
+            while (true)
             {
-                graphics = System.Drawing.Graphics.FromImage(bmp);
-                Command command = Parser.Parse(data);
-                //Consoles.Output(command);
-                BMP(command);
+                byte[] data = Udp.ReceiveMessage();
+                if (data != null)
+                {
+                    graphics = System.Drawing.Graphics.FromImage(bmp);
+                    Command command = Parser.Parse(data);
+                    //Consoles.Output(command);
+                    BMP(command);
+                    data = null;
+                }
             }
+           
         }
     }
 }
